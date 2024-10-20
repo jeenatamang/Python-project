@@ -54,7 +54,7 @@ def add_task():
         task_string = f"{task} | Priority: {priority} | Due: {due_date}"
         tasks.insert(tk.END, task_string)
         task_entry.delete(0, tk.END)
-        on_focusout(None)
+        task_entry.config(fg='black')
     else:
         messagebox.showwarning("Warning", "You must enter a task.")
 
